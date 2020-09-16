@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #3d9ec2;
+  text-decoration: none;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #3d9ec2;
+  height: 100px;
+  padding: 15px;
+  color: #fff;
+  > h1 {
+    padding-top: 15px;
+    font-size: 55px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  > p {
+    font-size: 16px;
+    display: inline;
+  }
+}
+
+.main {
+  font-family: futura-pt-bold, Futura, Trebuchet MS, Arial, sans-serif;
+  background-color: #00aad2;
+}
+
+.urlForm {
+  width: 400px;
+  height: 370px;
+  padding-top: 55px;
+  border-radius: 10px;
+  margin: 75px;
+  display: inline-block;
+  text-align: center;
+  background: #ff4d4f;
+  color: #ffffff;
+  > form label {
+    font-size: 20px;
+  }
+}
+
+.urlForm input {
+  width: 311px;
+  margin: 20px auto;
+  height: 54px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: block;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.urlForm .formButton {
+  width: 311px;
+  height: 55px;
+  background: #00aad2;
+  border-radius: 4px;
+  border-color: white;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+}
+
+.urlForm .reset {
+  width: 25px;
+}
+
+.urlForm span {
+  padding-top: 10px;
+  margin-bottom: -10px;
+  display: block;
+  font-size: 13px;
+}
+
+.urlsContainer {
+  margin-top: 75px;
+  vertical-align: top;
+  display: inline-block;
+  width: 55%;
+  margin-bottom: 75px;
+  > h1 {
+    color: #fff;
+    padding-left: 7px;
+    margin-bottom: 7px;
+  }
+}
+
+.urlBox {
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  > div h5 {
+    display: inline;
+    padding-right: 4px;
+    color: #da5c60;
+  }
+}
+
+.deleteButton {
+  float: right;
+  color: #ffffff;
+  background-color: #ec6e6e;
+  border: none;
+  padding: 1px 3px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+footer {
+  background-color: #3d9ec2;
+  height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    > h1 {
+      padding-top: 5px;
+      font-size: 45px;
+      margin-right: 0px;
+      display: block;
+    }
+    > p {
+      font-size: 15px;
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .urlForm {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: block;
+    > form label {
+      font-size: 20px;
+    }
+  }
+
+  .urlsContainer {
+    margin-top: 25px;
+    display: block;
+    width: 100%;
+    margin-bottom: 75px;
+    > h1 {
+      padding-left: 15px;
+      font-size: 20px;
+    }
+  }
+}
