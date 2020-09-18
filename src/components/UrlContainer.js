@@ -1,7 +1,6 @@
 import React from "react";
 
-const UrlContainer = ({ urlList, deleteUrl }) => {
-  console.log(urlList);
+export default ({ urlList, deleteUrl }) => {
   return (
     <div className="urlsContainer">
       <h1>The Short List</h1>
@@ -33,5 +32,3 @@ const UrlContainer = ({ urlList, deleteUrl }) => {
     </div>
   );
 };
-
-export default UrlContainer;

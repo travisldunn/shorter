@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const Form = ({ onSubmit }) => {
+export default ({ onSubmit }) => {
   const { register, handleSubmit, errors } = useForm();
 
   return (
@@ -22,5 +22,3 @@ const Form = ({ onSubmit }) => {
     </div>
   );
 };
-
-export default Form;
