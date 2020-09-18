@@ -1,9 +1,11 @@
 import React from "react";
 
 const UrlContainer = ({ urlList, deleteUrl }) => {
+  console.log(urlList);
   return (
     <div className="urlsContainer">
       <h1>The Short List</h1>
+
       {urlList.map((url, idx) => {
         return (
           <div className="urlBox" key={idx}>

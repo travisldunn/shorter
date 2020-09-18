@@ -21,14 +21,18 @@ const App = () => {
     let list = urlList;
     if (!isValid(data, list)) return;
     const short = await api.createShortUrl(data.long_url, data.slug);
-    setUrlList((list) => [...list, short]);
+    if (short) setUrlList((list) => [...list, short]);
   };
 
   const deleteUrl = async (slug) => {
-    let list = urlList;
-    await api.deleteUrl(slug);
-    list = list.filter((url) => url.slug !== slug);
-    setUrlList(list);
+    try {
+      let list = urlList;
+      await api.deleteUrl(slug);
+      list = list.filter((url) => url.slug !== slug);
+      setUrlList(list);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

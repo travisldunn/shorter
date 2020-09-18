@@ -14,7 +14,7 @@ const api = {
       .catch((err) => console.error(err.message)),
 
   createShortUrl: async (url, slug) => {
-    const data = slug ? { url, slug } : { url };
+    const data = slug ? { url: url, slug: slug } : { url };
     return await axios
       .post(baseUrl, { data }, headers)
       .then((res) => res.data)
@@ -22,10 +22,7 @@ const api = {
   },
 
   deleteUrl: async (slug) =>
-    await axios
-      .delete(baseUrl + slug, headers)
-      .then((res) => res.data)
-      .catch((err) => console.error(err.message)),
+    await axios.delete(baseUrl + slug, headers).then((res) => res.data),
 };
 
 export default api;
