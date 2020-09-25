@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const fetchUrls = async () => {
       const list = await api.fetchUrls();
-      setUrlList(list);
+      if (list) setUrlList(list);
     };
     fetchUrls();
   }, []);
@@ -24,15 +24,11 @@ const App = () => {
     if (short) setUrlList((list) => [...list, short]);
   };
 
-  const deleteUrl = async (slug) => {
-    try {
-      let list = urlList;
-      await api.deleteUrl(slug);
-      list = list.filter((url) => url.slug !== slug);
-      setUrlList(list);
-    } catch (err) {
-      console.log(err);
-    }
+  const deleteUrl = async (urlCode) => {
+    let list = urlList;
+    await api.deleteUrl(urlCode);
+    list = list.filter((url) => url.urlCode !== urlCode);
+    setUrlList(list);
   };
 
   return (
